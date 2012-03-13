@@ -26,4 +26,4 @@ get-orig-source-git:
 
 override_dh_clean:
 	dh_clean
-	if [ -e quantum/vcsverison.py ]; then rm quantum/vcsversion.py; fi
+	if [ -e quantum/vcsversion.py ]; then rm quantum/vcsversion.py; fi
