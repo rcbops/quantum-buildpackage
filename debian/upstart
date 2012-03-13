@@ -1,0 +1,14 @@
+description "Quantum server"
+author "Chuck Short <zulcss@ubuntu.com>"
+
+start on (local-filesystems and net-device-up IFACE!=LOG)
+stop on runlevel [016]
+
+respawn
+
+pre-start script
+	mkdir -p /var/run/quantum
+	chown quantum:root /var/run/quantum
+end script
+
+exec su -c "quantum-server --flagfile=/etc/quantum/quantum.conf" quantum

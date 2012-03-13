@@ -1,0 +1,3 @@
+etc/plugins.ini etc/quantum
+etc/quantum.conf etc/quantum
+bin/quantum-server usr/bin

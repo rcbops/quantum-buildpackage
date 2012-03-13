@@ -1,0 +1,58 @@
+quantum (2012.0+e3-rcb1) precise; urgency=low
+
+  * hijack the packackaging for essex-e3 rebase from
+    https://github.com/openstack/quantum, revision
+    9a1823d72ba84f6f98a9870970a7cd6eab25822d
+
+ -- RCB Builder <rcb-deploy@lists.rackspace.com>  Tue, 13 Mar 2012 12:04:25 -0700
+
+quantum (2012.1~e2+git20120112-0ubuntu1) precise; urgency=low
+
+  * New upstream release.
+  * debian/rules:
+    - Fix git snapshot creation.
+    - Fix running test suite during the build.
+  * debian/control: Add adduser for quantum-server.
+  * debian/quantum-plugin-{cisco,openvswitch}.install: Install
+    everything needed for the plugins.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 12 Jan 2012 04:19:33 -0500
+
+quantum (2012.1~e2-0ubuntu2) precise; urgency=low
+
+  * debian/control: Build for architecture all.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Mon, 19 Dec 2011 10:28:16 -0500
+
+quantum (2012.1~e2-0ubuntu1) precise; urgency=low
+
+  * New upstream release.
+  * debian/rules: Add alternate get-orig-source.
+  * debian/patches/fix-version.patch: Removed no longer needed.
+  * Fix lintian warnings.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 16 Dec 2011 15:26:41 -0500
+
+quantum (2012.1~e2~20111209.f8152-0ubuntu1) precise; urgency=low
+
+  * New upstream release.
+  * debian/rules, debian/README.Source: Add support fo generating
+    new tarballs from git since tarball snapshots are not available
+    from jenkins yet.
+  * debian/rules: Update for new build system.
+  * debian/rules: Clean up files when running clean.
+  * debian/quantum-server.install, debian/quantum-server.dirs,
+    debian/quantum-plugins.*: Update for build system changes.
+  * debian/quantum-server.postinst: Fix user creation.
+  * debian/rules: Enable testsuite when building.
+  * Fix lintian errors (LP: #899352)
+  * debian/patches/fix-quantum-version.patch: Fix generating *.pyc
+    when trying to build.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 09 Dec 2011 15:31:35 -0500
+
+quantum (2012.1~e1-0ubuntu1) precise; urgency=low
+
+  * Initial release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 18 Nov 2011 15:29:53 -0500

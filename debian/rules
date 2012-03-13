@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh $@  --with python2
+
+ifeq (,$(findstring nocheck, $(DEB_BUILD_OPTIONS)))
+override_dh_auto_test:
+	./run_tests.sh -N || true
+endif
+
+get-orig-source:
+	uscan --verbose --force-download --rename --destdir=../build-area
+
+UPSTREAM_GIT=git://github.com/openstack/quantum.git
+DEBIAN_VERSION=$(shell dpkg-parsechangelog | sed -rne 's,^Version: ([^-]+).*,\1,p')
+DEBIAN_NAME=quantum
+get-orig-source-git:
+	git clone $(UPSTREAM_GIT) $(DEBIAN_NAME)
+	cd $(DEBIAN_NAME) ; \
+		git archive master --format=tar.gz \
+			--output=../$(DEBIAN_NAME)_$(DEBIAN_VERSION).orig.tar.gz \
+			--prefix=$(DEBIAN_NAME)-$(DEBIAN_VERSION)/
