@@ -1,1 +1,1 @@
-extended-diff-ignore = "^quantum/vscversion.py$"
+extended-diff-ignore = "quantum/vscversion.py$"
