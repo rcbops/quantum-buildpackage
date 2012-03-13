@@ -1,1 +1,1 @@
-extend-diff-ignore = "(^|/)vscversion.py$"
+extend-diff-ignore = "/vscversion.py$"
