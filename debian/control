@@ -23,6 +23,7 @@ Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/quantum/essex/debian
 Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-server-dev/qunatum/essex
 XS-Python-Version: >= 2.6
 Standards-Version: 3.9.2
+XCBS-RCB-Component: essex-e3
 
 Package: quantum-server
 Architecture: all
