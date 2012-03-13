@@ -23,3 +23,7 @@ get-orig-source-git:
 		git archive master --format=tar.gz \
 			--output=../$(DEBIAN_NAME)_$(DEBIAN_VERSION).orig.tar.gz \
 			--prefix=$(DEBIAN_NAME)-$(DEBIAN_VERSION)/
+
+override_dh_clean:
+	dh_clean
+	rm quanum/vcsversion.py
