@@ -1,1 +1,3 @@
-usr/lib/python*/dist-packages/*
+usr/lib/python*/dist-packages/quantum/*
+usr/lib/python*/dist-packages/quantum*
+

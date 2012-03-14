@@ -1,3 +1,9 @@
+quantum (2012.0+e3-rcb2) precise; urgency=low
+
+  * packaging fix for python-quantum (included pyshared/docs)
+
+ -- RCB Builder <rcb-deploy@lists.rackspace.com>  Wed, 14 Mar 2012 10:33:02 -0700
+
 quantum (2012.0+e3-rcb1) precise; urgency=low
 
   * hijack the packackaging for essex-e3 rebase from
