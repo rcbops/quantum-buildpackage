@@ -11,4 +11,4 @@ pre-start script
 	chown quantum:root /var/run/quantum
 end script
 
-exec su -c "quantum-server --flagfile=/etc/quantum/quantum.conf" quantum
+exec su -c "quantum-server --config-file=/etc/quantum/quantum.conf" quantum
