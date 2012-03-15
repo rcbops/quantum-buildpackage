@@ -1,0 +1,10 @@
+description "Quantum OpenVSwitch Agent"
+author "Ron Pedde <ron@pedde.com>"
+
+start on (local-filesystems and net-device-up IFACE!=LOG)
+stop on runlevel [016]
+
+respawn
+
+exec su -c "python /usr/sbin/ovs_quantum_agent.py /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini" root
+

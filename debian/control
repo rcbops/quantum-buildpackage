@@ -58,7 +58,7 @@ Description: Quantum is a virtual network service for Openstack. (openvswitch pl
 
 Package: quantum-plugin-openvswitch-agent
 Architecture: all
-Depends: ${python:Depends}, ${shlibs:Depends}, ${misc:Depends}, python-sqlalchemy
+Depends: ${python:Depends}, ${shlibs:Depends}, ${misc:Depends}, python-sqlalchemy, quantum-plugin-openvswitch
 Description: Quantum is a virtual network service for Openstack. (openvswitch plugin)
  Quantum is a virtual network service for Openstack, and a part of
  Netstack. Just like OpenStack Nova provides an API to dynamically
